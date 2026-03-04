@@ -22,13 +22,17 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full border-2 border-gold flex items-center justify-center">
-              <span className="font-heading text-gold font-bold text-lg">S</span>
+              <span className="font-heading text-gold font-bold text-lg">
+                S
+              </span>
             </div>
             <div>
               <span className="font-heading text-xl font-bold text-primary-foreground tracking-wide">
-                Silva & Associados
+                Maciel & Associados
               </span>
-              <span className="block text-xs text-gold tracking-[0.2em] uppercase">Advocacia</span>
+              <span className="block text-xs text-gold tracking-[0.2em] uppercase">
+                Advocacia
+              </span>
             </div>
           </Link>
 
@@ -52,7 +56,11 @@ const Header = () => {
               rel="noopener noreferrer"
               className="ml-4"
             >
-              <Button variant="outline" size="sm" className="border-gold text-gold hover:bg-gold hover:text-primary font-semibold">
+              <Button
+                variant="outline"
+                size="sm"
+                className="border-gold text-gold hover:bg-gold hover:text-primary font-semibold"
+              >
                 <Phone className="w-4 h-4 mr-2" />
                 WhatsApp
               </Button>
@@ -92,7 +100,11 @@ const Header = () => {
               rel="noopener noreferrer"
               className="mt-2"
             >
-              <Button variant="outline" size="sm" className="w-full border-gold text-gold hover:bg-gold hover:text-primary font-semibold">
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full border-gold text-gold hover:bg-gold hover:text-primary font-semibold"
+              >
                 <Phone className="w-4 h-4 mr-2" />
                 Fale pelo WhatsApp
               </Button>

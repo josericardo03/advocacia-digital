@@ -1,6 +1,6 @@
 const lawyers = [
   {
-    name: "Dr. Ricardo Silva",
+    name: "Dr. Ricardo Maciel",
     oab: "OAB/SP 12345",
     specialty: "Direito Civil e Empresarial",
     bio: "Sócio fundador com mais de 25 anos de experiência. Especialista em litígios complexos e consultoria empresarial. Formado pela USP com mestrado em Direito Comercial.",
@@ -34,8 +34,12 @@ const Advogados = () => {
     <>
       <section className="bg-navy-gradient py-20">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gold tracking-[0.2em] uppercase text-sm font-semibold mb-2">Nossa equipe</p>
-          <h1 className="font-heading text-4xl md:text-5xl font-bold text-card">Advogados</h1>
+          <p className="text-gold tracking-[0.2em] uppercase text-sm font-semibold mb-2">
+            Nossa equipe
+          </p>
+          <h1 className="font-heading text-4xl md:text-5xl font-bold text-card">
+            Advogados
+          </h1>
         </div>
       </section>
 
@@ -43,14 +47,25 @@ const Advogados = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {lawyers.map((l) => (
-              <div key={l.name} className="bg-card rounded-lg p-8 border border-border hover:border-gold/40 transition-colors">
+              <div
+                key={l.name}
+                className="bg-card rounded-lg p-8 border border-border hover:border-gold/40 transition-colors"
+              >
                 <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center mb-4">
-                  <span className="font-heading text-2xl font-bold text-gold">{l.initials}</span>
+                  <span className="font-heading text-2xl font-bold text-gold">
+                    {l.initials}
+                  </span>
                 </div>
-                <h3 className="font-heading text-xl font-bold text-foreground">{l.name}</h3>
-                <p className="text-gold text-sm font-semibold mb-1">{l.specialty}</p>
+                <h3 className="font-heading text-xl font-bold text-foreground">
+                  {l.name}
+                </h3>
+                <p className="text-gold text-sm font-semibold mb-1">
+                  {l.specialty}
+                </p>
                 <p className="text-xs text-muted-foreground mb-3">{l.oab}</p>
-                <p className="text-muted-foreground text-sm leading-relaxed">{l.bio}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {l.bio}
+                </p>
               </div>
             ))}
           </div>

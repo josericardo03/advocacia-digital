@@ -6,7 +6,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 
 const Contato = () => {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -17,7 +22,9 @@ const Contato = () => {
     }
     setLoading(true);
     setTimeout(() => {
-      toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+      toast.success(
+        "Mensagem enviada com sucesso! Entraremos em contato em breve.",
+      );
       setForm({ name: "", email: "", phone: "", message: "" });
       setLoading(false);
     }, 1000);
@@ -27,8 +34,12 @@ const Contato = () => {
     <>
       <section className="bg-navy-gradient py-20">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gold tracking-[0.2em] uppercase text-sm font-semibold mb-2">Fale conosco</p>
-          <h1 className="font-heading text-4xl md:text-5xl font-bold text-card">Contato</h1>
+          <p className="text-gold tracking-[0.2em] uppercase text-sm font-semibold mb-2">
+            Fale conosco
+          </p>
+          <h1 className="font-heading text-4xl md:text-5xl font-bold text-card">
+            Contato
+          </h1>
         </div>
       </section>
 
@@ -36,25 +47,68 @@ const Contato = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <div>
-              <h2 className="font-heading text-2xl font-bold text-foreground mb-6">Envie sua mensagem</h2>
+              <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
+                Envie sua mensagem
+              </h2>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-1 block">Nome *</label>
-                  <Input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Seu nome completo" className="bg-card" />
+                  <label className="text-sm font-medium text-foreground mb-1 block">
+                    Nome *
+                  </label>
+                  <Input
+                    value={form.name}
+                    onChange={(e) => setForm({ ...form, name: e.target.value })}
+                    placeholder="Seu nome completo"
+                    className="bg-card"
+                  />
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-1 block">E-mail *</label>
-                  <Input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="seu@email.com" className="bg-card" />
+                  <label className="text-sm font-medium text-foreground mb-1 block">
+                    E-mail *
+                  </label>
+                  <Input
+                    type="email"
+                    value={form.email}
+                    onChange={(e) =>
+                      setForm({ ...form, email: e.target.value })
+                    }
+                    placeholder="seu@email.com"
+                    className="bg-card"
+                  />
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-1 block">Telefone</label>
-                  <Input type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="(11) 99999-9999" className="bg-card" />
+                  <label className="text-sm font-medium text-foreground mb-1 block">
+                    Telefone
+                  </label>
+                  <Input
+                    type="tel"
+                    value={form.phone}
+                    onChange={(e) =>
+                      setForm({ ...form, phone: e.target.value })
+                    }
+                    placeholder="(11) 99999-9999"
+                    className="bg-card"
+                  />
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-1 block">Mensagem *</label>
-                  <Textarea value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder="Descreva brevemente sua necessidade jurídica..." rows={5} className="bg-card" />
+                  <label className="text-sm font-medium text-foreground mb-1 block">
+                    Mensagem *
+                  </label>
+                  <Textarea
+                    value={form.message}
+                    onChange={(e) =>
+                      setForm({ ...form, message: e.target.value })
+                    }
+                    placeholder="Descreva brevemente sua necessidade jurídica..."
+                    rows={5}
+                    className="bg-card"
+                  />
                 </div>
-                <Button type="submit" disabled={loading} className="bg-gold text-primary hover:bg-gold-dark font-semibold w-full">
+                <Button
+                  type="submit"
+                  disabled={loading}
+                  className="bg-gold text-primary hover:bg-gold-dark font-semibold w-full"
+                >
                   <Send className="w-4 h-4 mr-2" />
                   {loading ? "Enviando..." : "Enviar Mensagem"}
                 </Button>
@@ -63,34 +117,48 @@ const Contato = () => {
 
             <div className="space-y-8">
               <div>
-                <h2 className="font-heading text-2xl font-bold text-foreground mb-6">Informações de Contato</h2>
+                <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
+                  Informações de Contato
+                </h2>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-gold mt-0.5 shrink-0" />
                     <div>
                       <p className="font-semibold text-foreground">Endereço</p>
-                      <p className="text-muted-foreground text-sm">Av. Paulista, 1000, Sala 501<br />São Paulo - SP, 01310-100</p>
+                      <p className="text-muted-foreground text-sm">
+                        Av. Paulista, 1000, Sala 501
+                        <br />
+                        São Paulo - SP, 01310-100
+                      </p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Phone className="w-5 h-5 text-gold mt-0.5 shrink-0" />
                     <div>
-                      <p className="font-semibold text-foreground">Telefone / WhatsApp</p>
-                      <p className="text-muted-foreground text-sm">(11) 99999-9999</p>
+                      <p className="font-semibold text-foreground">
+                        Telefone / WhatsApp
+                      </p>
+                      <p className="text-muted-foreground text-sm">
+                        (11) 99999-9999
+                      </p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Mail className="w-5 h-5 text-gold mt-0.5 shrink-0" />
                     <div>
                       <p className="font-semibold text-foreground">E-mail</p>
-                      <p className="text-muted-foreground text-sm">contato@silvaadvocacia.com.br</p>
+                      <p className="text-muted-foreground text-sm">
+                        contato@Macieladvocacia.com.br
+                      </p>
                     </div>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="font-heading text-lg font-semibold text-foreground mb-3">Localização</h3>
+                <h3 className="font-heading text-lg font-semibold text-foreground mb-3">
+                  Localização
+                </h3>
                 <div className="rounded-lg overflow-hidden border border-border">
                   <iframe
                     title="Localização do escritório"
