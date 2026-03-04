@@ -178,7 +178,7 @@ const Contato = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button className="w-full bg-green-600 hover:bg-green-700 text-card font-semibold mt-4">
+                <Button className="w-full bg-green-600 hover:bg-green-700 text-gold font-semibold mt-4">
                   <Phone className="w-4 h-4 mr-2" />
                   Fale pelo WhatsApp
                 </Button>

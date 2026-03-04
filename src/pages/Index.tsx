@@ -109,7 +109,7 @@ const Index = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-card/30 text-card hover:bg-card/10 font-semibold text-base px-8"
+                  className="border-card/30 text-gold hover:bg-card/10 font-semibold text-base px-8"
                 >
                   <Phone className="mr-2 w-5 h-5" />
                   Fale pelo WhatsApp
@@ -249,7 +249,7 @@ const Index = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-card/30 text-card hover:bg-card/10 font-semibold px-8"
+                className="border-card/30 text-gold hover:bg-card/10 font-semibold px-8"
               >
                 <Phone className="mr-2 w-5 h-5" />
                 WhatsApp
